@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  preBuild:
+    commands:
+      - npm install --legacy-peer-deps
+  build:
+    commands:
+      - npm run build
+artifacts:
+  baseDirectory: .next
+  files:
+    - '**/*'
+cache:
+  paths:
+    - node_modules/**/*
