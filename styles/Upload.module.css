@@ -1,0 +1,41 @@
+.container {
+    max-width: 80%;
+    justify-content: center;
+    margin: 100px auto;
+    padding: 10px;
+    background-color: red;
+}
+
+.form {
+    width: 80%;
+}
+
+.formItem {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.formItem label {
+    display: block;
+}
+
+.formItem input[type='text'] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.formItem textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.message {
+    color: green;
+}
