@@ -9,8 +9,18 @@ module.exports = {
     },
   },
   env: {
-    MONGO_URI: "mongodb+srv://vgouws:vgouws@cluster0.wbd9s.mongodb.net/autodb",
-    MONGODB_DB: "autodb",
+    // 서울 리전
+    MYSQL_HOST_SEOUL: process.env.MYSQL_HOST_SEOUL,
+    MYSQL_USER_SEOUL: process.env.MYSQL_USER_SEOUL,
+    MYSQL_PASSWORD_SEOUL: process.env.MYSQL_PASSWORD_SEOUL,
+    MYSQL_DATABASE_SEOUL: process.env.MYSQL_DATABASE_SEOUL,
+
+    // 상파울로 리전
+    MYSQL_HOST_SAO_PAULO: process.env.MYSQL_HOST_SAO_PAULO,
+    MYSQL_USER_SAO_PAULO: process.env.MYSQL_USER_SAO_PAULO,
+    MYSQL_PASSWORD_SAO_PAULO: process.env.MYSQL_PASSWORD_SAO_PAULO,
+    MYSQL_DATABASE_SAO_PAULO: process.env.MYSQL_DATABASE_SAO_PAULO,
+
     DEV_URL: "http://localhost:3000",
     PROD_URL: "http://autolink.vercel.com",
   },
