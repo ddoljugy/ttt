@@ -11,8 +11,8 @@ frontend:
         - npm install axios
         - npm install @babel/plugin-transform-class-properties@latest
         - npm install glob@latest
-        - npm uninstall react-rangeslider # 문제 해결을 위해 react-rangeslider 제거
-        - npm install rc-slider # 대체 라이브러리로 rc-slider 설치
+        - npm uninstall react-rangeslider
+        - npm install rc-slider 
     build:
       commands:
         - echo "Building the app..."
