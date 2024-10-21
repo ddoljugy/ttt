@@ -4,8 +4,7 @@ frontend:
     preBuild:
       commands:
         - echo "Installing dependencies and updating packages..."
-        - npm install --legacy-peer-deps
-        
+        - npm install --force --legacy-peer-deps  # 강제로 의존성 문제 해결
         - npm install rimraf@latest
         - npm install uuid@latest
         - npm uninstall request
@@ -24,17 +23,14 @@ frontend:
     paths:
       - node_modules/**/*
 
-
 env:
   variables:
-    
     MYSQL_HOST_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_HOST_SEOUL"
     MYSQL_USER_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_USER_SEOUL"
     MYSQL_PASSWORD_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_PASSWORD_SEOUL"
     MYSQL_DATABASE_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_DATABASE_SEOUL"
     S3_BUCKET_SEOUL: "/amplify/dsa9vphetn7ps/main/S3_BUCKET_SEOUL"
 
-    
     MYSQL_HOST_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_HOST_SAO_PAULO"
     MYSQL_USER_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_USER_SAO_PAULO"
     MYSQL_PASSWORD_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_PASSWORD_SAO_PAULO"
@@ -46,4 +42,4 @@ backend:
     build:
       commands:
         - echo "Installing backend dependencies..."
-        - npm install --legacy-peer-deps
+        - npm install --force --legacy-peer-deps  # 강제로 의존성 문제 해결
