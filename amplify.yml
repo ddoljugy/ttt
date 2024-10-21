@@ -8,7 +8,7 @@ phases:
     commands:
       - npm run build
 artifacts:
-  base-directory: .out
+  base-directory: .next
   files:
     - '**/*'
 cache:
