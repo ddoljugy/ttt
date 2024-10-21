@@ -11,8 +11,7 @@ frontend:
         - npm install axios
         - npm install @babel/plugin-transform-class-properties@latest
         - npm install glob@latest
-        - npm uninstall react-rangeslider
-        - npm install rc-slider 
+
     build:
       commands:
         - echo "Building the app..."
