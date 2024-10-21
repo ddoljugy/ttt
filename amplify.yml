@@ -3,20 +3,40 @@ frontend:
   phases:
     preBuild:
       commands:
-        - 'npm install --legacy-peer-deps'
+        - echo "Installing dependencies..."
+        - npm install --legacy-peer-deps
     build:
       commands:
-        - 'npm run build'
+        - echo "Building the app..."
+        - npm run build
   artifacts:
     baseDirectory: .next
     files:
       - '**/*'
   cache:
     paths:
-      - 'node_modules/**/*'
+      - node_modules/**/*
+
+
+env:
+  variables:
+    
+    MYSQL_HOST_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_HOST_SEOUL"
+    MYSQL_USER_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_USER_SEOUL"
+    MYSQL_PASSWORD_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_PASSWORD_SEOUL"
+    MYSQL_DATABASE_SEOUL: "/amplify/dsa9vphetn7ps/main/MYSQL_DATABASE_SEOUL"
+    S3_BUCKET_SEOUL: "/amplify/dsa9vphetn7ps/main/S3_BUCKET_SEOUL"
+
+    
+    MYSQL_HOST_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_HOST_SAO_PAULO"
+    MYSQL_USER_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_USER_SAO_PAULO"
+    MYSQL_PASSWORD_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_PASSWORD_SAO_PAULO"
+    MYSQL_DATABASE_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/MYSQL_DATABASE_SAO_PAULO"
+    S3_BUCKET_SAO_PAULO: "/amplify/dsa9vphetn7ps/main/S3_BUCKET_SAO_PAULO"
 
 backend:
   phases:
     build:
       commands:
+        - echo "Installing backend dependencies..."
         - npm install --legacy-peer-deps
